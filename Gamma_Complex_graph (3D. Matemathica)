@@ -1,0 +1,8 @@
+Plot3D[Abs[Gamma[x + I y]], {x, -4.5, 5}, {y, -5, 5},
+PlotPoints -> 400, PlotRange -> {0, 6}, ViewPoint -> {-2, -2.5, 1},
+Boxed -> False, BoxRatios -> Automatic, 
+AxesEdge -> {{-1, -1}, {-1, -1}, {1, -1}},
+Mesh -> {9, 9, 5}, MeshStyle -> {Black, Black, Opacity[0.6]},
+MeshFunctions -> {Min[#1, 2*(#1 + 2)] &, #2 &, #3 &},
+RegionFunction -> Function[{x, y, z}, Abs[Gamma[x + I y]] <= 6],
+AxesLabel -> {Re[z], Im[z]}, PlotLabel -> Style[Abs[Gamma[z]], 20]]
