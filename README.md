@@ -43,6 +43,7 @@ Puedes contactar conmigo en:
 
 _________________________________________________________________
 _________________________________________________________________
+_________________________________________________________________
 
 
 In this repository, you will find some materials which were used in my Bachelor's Degree Thesis. 
@@ -65,7 +66,7 @@ University of Valladolid.
 
 -----------------------------------------------------------------
 
-"As for the material created by me, it is free to use. Anyone may use or modify the images or codes included here as they wish, provided that they appropriately cite the original work: 
+As for the material created by me, it is free to use. Anyone may use or modify the images or codes included here as they wish, provided that they appropriately cite the original work: 
 
 <<Gómez Villamayor, Pablo. The Gamma Function of Euler. Final Degree Project. Degree in Mathematics. University of Valladolid. July 2025>>.
 
