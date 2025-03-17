@@ -1,7 +1,7 @@
 # TFG_Gamma_PGV
 
 En este repositorio se encuentran algunos materiales utilizados en la elaboración de mi Trabajo de Fin de Grado.
-Entre ellos, destacan las gráficas de la función Gamma (real y compleja), y los códigos utilizados para generarlas.
+Entre ellos, destacan las gráficas de la función Gamma real y compleja, y los códigos utilizados para generarlas.
 
 -----------------------------------------------------------------
 
