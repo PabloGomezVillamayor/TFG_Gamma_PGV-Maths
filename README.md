@@ -20,7 +20,7 @@ Universidad de Valladolid.
 
 -----------------------------------------------------------------
 
-Respecto al material elaborado por mí, este es de uso libre. Cualquier persona puede utilizar las imágenes y los códigos que aquí se incluyen, o modificarlos como deseen, citando correspondientemente el trabajo original:  
+Respecto al material elaborado por mí, este es de uso libre. Cualquier persona interesada puede utilizar las imágenes y los códigos que aquí se incluyen, o modificarlos como desee, citando correspondientemente el trabajo original:  
 
 <<Gómez Villamayor, Pablo. La Función Gamma de Euler. Trabajo de Fin de Grado. Grado en Matemáticas. Universidad de Valladolid. Julio de 2025>>. 
 
@@ -66,7 +66,7 @@ University of Valladolid.
 
 -----------------------------------------------------------------
 
-As for the material created by me, it is free to use. Anyone may use or modify the images or codes included here as they wish, provided that they appropriately cite the original work: 
+As for the material created by me, it is free to use. Anyone may use or modify the images or codes included here as they wish, provided that he/she appropriately cites the original work: 
 
 <<Gómez Villamayor, Pablo. The Gamma Function of Euler. Final Degree Project. Degree in Mathematics. University of Valladolid. July 2025>>.
 
