@@ -47,7 +47,7 @@ _________________________________________________________________
 
 
 In this repository, you will find some materials which were used in my Bachelor's Degree Thesis. 
-The graphs of the real and complex Gamma function are included, as well as the codes used to generate them.
+The graphs of the real and complex Gamma function are included, as well as the code used to generate them.
 
 -----------------------------------------------------------------
 
@@ -66,7 +66,7 @@ University of Valladolid.
 
 -----------------------------------------------------------------
 
-As for the material created by me, it is free to use. Anyone may use or modify the images or codes included here as they wish, provided that he/she appropriately cites the original work: 
+As for the material created by me, it is free to use. Anyone may use or modify the images or code included here as they wish, provided appropriate credit is given to the original work: 
 
 <<Gómez Villamayor, Pablo. The Gamma Function of Euler. Final Degree Project. Degree in Mathematics. University of Valladolid. July 2025>>.
 
