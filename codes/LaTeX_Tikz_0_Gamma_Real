@@ -1,0 +1,54 @@
+\documentclass[tikz]{standalone}
+
+% Mis paquetes
+\usepackage{tikz}
+\usepackage{pgfplots} 
+\pgfplotsset{compat=1.18}
+
+% Mis colores
+\definecolor{MiAzul}{RGB}{5,108,217} 
+\definecolor{MiNaranja}{RGB}{227,132,27}
+
+\begin{document}
+
+% Figura 2.1: Gamma real
+\begin{tikzpicture}[scale=1]   
+
+\begin{axis}[
+width=1\textwidth,
+height=1\textwidth,
+xmin = -4.9, xmax = 6.1,        %ymin = -3.5, ymax = 3.5,  
+restrict y to domain=-10:25,
+axis lines = middle,
+axis line style={-latex},  
+xlabel={$x$}, 
+ylabel={$\Gamma{(x)}$},         %enlarge x limits={upper={val=0.2}},
+enlarge y limits=0.05,
+x label style={at={(ticklabel* cs:1.00)}, inner sep=5pt, anchor=north},
+y label style={at={(ticklabel* cs:1.00)}, inner sep=5pt, anchor=south east},
+xtick = {-4,-3,-2,-1,0,1,2,3,4,5},
+ytick = {2,6,24},
+xticklabels = {$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+yticklabels = {$2$,$6$,$24$},
+]
+
+% Gamma para x > 0
+\addplot[color=MiAzul, samples=1200, smooth, thick, domain = 0:6] gnuplot{gamma(x)};
+
+% Gamma para x < 0
+\foreach[evaluate={\N=\n-1}] \n in {0,...,-5}{%
+\addplot[color=MiAzul, samples=555, smooth, thick, 
+domain = \n:\N] gnuplot{gamma(x)};
+        
+% Asíntotas
+\addplot [domain=-20:30, samples=200, densely dotted, thin] (\N, x);
+}
+        
+% Puntos (x,Gamma(x)), x = 1,...,5. Gamma(n)=(n-1)!
+
+\addplot+[only marks, color=MiNaranja, mark=*] coordinates {(1,1)
+(2,1) (3,2) (4,6) (5,24)};
+        
+\end{axis}
+\end{tikzpicture}
+\end{document}
