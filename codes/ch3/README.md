@@ -13,4 +13,4 @@ fig3.j.nb -> Code to generate figure 3.j in Mathematica. j=1,2,3,4.
 fig3.j_export_HD.nb -> Code to generate figure 3.j in Mathematica, and export it in high resolution (".jpg" format). j=1,2,3,4.
                        You can modify the directory in which the image is generated in your computer.
 
-Z_All_Figures.nb -> Complete Mathematica code
+Z_All_Figures.nb -> Complete Mathematica code.
