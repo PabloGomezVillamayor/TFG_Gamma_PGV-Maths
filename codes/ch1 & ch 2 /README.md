@@ -1,6 +1,10 @@
+INFO ABOUT LaTeX code
+-----------------------------------------------------------
+
+------------------------------------------------------------
+
 The LaTeX code (".tex") is already prepared to be executed. 
 You just have to copy-paste and compile it in Overleaf.
-------------------------------------------------------------
 
 The pdf generated after compilation contains all the figures which appear in chapters 1 and 2: 
 fig 1.1, 1.2, 1.3 & 1.4 / fig 2.1, 2.2, 2.3 & 2.4
