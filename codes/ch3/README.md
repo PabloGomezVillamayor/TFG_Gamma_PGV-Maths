@@ -1,3 +1,6 @@
+Info about Mathematica codes
+-----------------------------------------------------------------------------------------------
+
 The Mathematica codes (".nb") are already prepared to be executed. 
 You just have to copy-paste and run it in Mathematica. I used versión 14.2.1.
 (PS: This software can be downloaded for free if you are a member of University of Valladolid).
