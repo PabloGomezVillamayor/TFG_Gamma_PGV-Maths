@@ -68,7 +68,7 @@ University of Valladolid.
 
 As for the material created by me, it is free to use. Anyone may use or modify the images or code included here as they wish, provided appropriate credit is given to the original work: 
 
-<<Gómez Villamayor, Pablo. The Gamma Function of Euler. Final Degree Project. Degree in Mathematics. University of Valladolid. July 2025>>.
+<<Gómez Villamayor, Pablo. Euler's Gamma Function. Bachelor's Degree Thesis. Bachelor's Degree in Mathematics. University of Valladolid. July 2025>>.
 
 
 The original text will be available soon in the repository of the University of Valladolid: https://uvadoc.uva.es/
