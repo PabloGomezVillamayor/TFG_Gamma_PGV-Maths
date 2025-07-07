@@ -33,6 +33,10 @@
 \pgfplotsset{compat=newest}
 \pgfplotsset{soldot/.style={color=MiAzul,only marks,mark=*}} \pgfplotsset{holdot/.style={color=MiAzul,fill=white,only marks,mark=*}}
 
+% CAP 3
+\usetikzlibrary{patterns,patterns.meta} % importante para fill between con patrón
+\usepgfplotslibrary{fillbetween}
+
 
 %-------------------------------------------------------------------------------------
 %FIN PREÁMBULO
@@ -406,9 +410,161 @@
 \end{tikzpicture}
 
 
+%FIG 3.1
+
+\begin{tikzpicture}
+  \begin{axis}[
+    %width=1\textwidth,
+    %height=1\textwidth,
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$1/x$},
+    xtick={1,2,...,7},
+    ytick={0.2,0.4,0.6,0.8,1},
+    xmin=0.1, xmax=8,
+    ymin=0, ymax=1.25,
+    domain=0.1:7,
+    samples=200,
+    width=14cm,
+    height=8cm,
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=north},
+    every axis y label/.style={at={(current axis.above origin)}, anchor=east}
+  ]
+
+    % Curva y = 1/x
+    \addplot[name path=curve, thick, teal, MiAzul, domain=0.1:8] {1/x};
+
+    % Línea del eje X (para el fill between)
+    \path[name path=axis] (axis cs:0.1,0) -- (axis cs:7,0);
+
+    % Área bajo la curva sombreada con patrón
+    \addplot [
+        pattern={north east lines},
+        pattern color=MiAzul
+    ] fill between [
+        of=curve and axis,
+        soft clip={domain=1:7}
+    ];
+
+    % Rectángulos
+    \foreach \k in {1,...,6} {
+      \addplot[black, thick, fill=none] coordinates {
+        (\k, {1/\k})
+        (\k, 0)
+        (\k+1, 0)
+        (\k+1, {1/\k})
+        (\k, {1/\k})
+      };
+    }
+
+  \end{axis}
+\end{tikzpicture}
 
 
+% FIG 3.2
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$1/x$},
+    xtick={1,2,...,7},
+    ytick={0.2,0.4,0.6,0.8,1},
+    xmin=0.1, xmax=8,
+    ymin=0, ymax=1.25,
+    domain=0.1:7,
+    samples=200,
+    width=14cm,
+    height=8cm,
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=north},
+    every axis y label/.style={at={(current axis.above origin)}, anchor=east}
+  ]
+
+    % Curva y = 1/x
+    \addplot[name path=curve, thick, teal, MiAzul, domain=0.1:8] {1/x};
+
+    % Línea del eje X para el área
+    \path[name path=axis] (axis cs:0.1,0) -- (axis cs:7,0);
+
+    % Área bajo la curva con sombreado
+    \addplot [
+        pattern={north east lines},
+        pattern color=MiAzul
+    ] fill between [
+        of=curve and axis,
+        soft clip={domain=1:7}
+    ];
+
+    % Rectángulos inferiores (desde k-1 hasta k con altura 1/k)
+    \foreach \k in {1,...,7} {
+      \ifnum\k>1
+        \pgfmathtruncatemacro{\km}{\k - 1}
+        \addplot[black, thick, fill=none] coordinates {
+          (\km, {1/\k})
+          (\km, 0)
+          (\k, 0)
+          (\k, {1/\k})
+          (\km, {1/\k})
+        };
+      \fi
+    }
+
+  \end{axis}
+\end{tikzpicture}
 
 
+% FIG 3.3
+
+\begin{tikzpicture}
+  \begin{axis}[
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$1/x$},
+    xtick={1,2,...,7},
+    ytick={0.2,0.4,0.6,0.8,1},
+    xmin=0.1, xmax=8,
+    ymin=0, ymax=1.25,
+    domain=0.1:7,
+    samples=200,
+    width=14cm,
+    height=8cm,
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=north},
+    every axis y label/.style={at={(current axis.above origin)}, anchor=east}
+  ]
+
+    % Curva y = 1/x
+    \addplot[name path=curve, thick, MiAzul, domain=0.1:8] {1/x};
+
+    % Línea del eje X (para el fill between)
+    \path[name path=axis] (axis cs:0.1,0) -- (axis cs:7.1,0);
+
+    % Área bajo la curva sombreada con patrón
+    \addplot [
+        pattern=north east lines,
+        pattern color=MiAzul
+    ] fill between [
+        of=curve and axis,
+        soft clip={domain=1:7}
+    ];
+
+    % Trapecios entre (k,1/k) y (k+1,1/(k+1))
+    \foreach \k in {1,...,6} {
+      \pgfmathsetmacro{\next}{\k + 1}
+      \pgfmathsetmacro{\yk}{1/(\k)}
+      \pgfmathsetmacro{\ynext}{1/(\next)}
+      \addplot[black, thick, fill=none] coordinates {
+        (\k, \yk)
+        (\k, 0)
+        (\next, 0)
+        (\next, \ynext)
+      };
+      \addplot[black, thick] coordinates {
+        (\k, \yk)
+        (\next, \ynext)
+      };
+    }
+
+  \end{axis}
+\end{tikzpicture}
 
 \end{document}
