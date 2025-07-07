@@ -1,0 +1,13 @@
+Show[Plot3D[Abs[Gamma[x + I y]], {x, -5.5, 6}, {y, -6, 6}, 
+PlotPoints -> 500, PlotRange -> {0, 8}, ViewPoint -> {-2, -2, 1}, 
+Boxed -> False, BoxRatios -> Automatic, 
+PlotStyle -> Directive[Cyan, Specularity[Blue, 40]], 
+AxesEdge -> {{-1, -1}, {-1, -1}, {1, -1}}, 
+Mesh -> {{-5, -4, -3, -2, -1, -0, 1, 2, 3, 4, 
+5}, {-5, -4, -3, -2, -1, -0, 1, 2, 3, 4, 
+5}, {-5, -4, -3, -2, -1, -0, 1, 2, 3, 4, 5}}, 
+MeshStyle -> {Gray, Gray, Opacity[0.6]}, 
+MeshFunctions -> {Min[#1, 2*(#1 + 2)] &, #2 &, #3 &}, 
+RegionFunction -> Function[{x, y, z}, Abs[Gamma[x + I y]] <= 8], 
+AxesLabel -> {Re[z], Im[z]}, PlotLabel -> Style[Abs[Gamma[z]], 21]],
+Boxed -> False, Background -> None]

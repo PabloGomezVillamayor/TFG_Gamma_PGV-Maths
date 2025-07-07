@@ -1,0 +1,9 @@
+Export["Gamma_3D_HD_Final_4_arg.jpg", 
+ComplexPlot3D[Gamma[z], {z, -5 - 5 I, 5 + 5 I}, PlotPoints -> 1000, 
+MaxRecursion -> 10, ClippingStyle -> None, Mesh -> False,
+ColorFunction -> "ShiftedCyclicLogAbs", Boxed -> False, 
+ViewPoint -> {-2, -2, 1}, 
+AxesLabel -> (Style[#, 14] & /@ {HoldForm[Re[z]], HoldForm[Im[z]], 
+HoldForm[Abs[Gamma[z]]]}), 
+PlotLegends -> BarLegend[Automatic, LegendLabel -> HoldForm[Arg[Gamma[z]]]]], 
+ImageSize -> Full, ImageResolution -> 1200]
