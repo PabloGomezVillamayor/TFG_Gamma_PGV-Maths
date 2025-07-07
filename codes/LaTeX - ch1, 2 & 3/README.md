@@ -6,8 +6,8 @@ Info about LaTeX code
 The LaTeX code (".tex") is already prepared to be executed. 
 You just have to copy-paste and compile it in Overleaf.
 
-The pdf generated after compilation contains all the figures which appear in chapters 1 and 2: 
-fig 1.1, 1.2, 1.3 & 1.4 / fig 2.1, 2.2, 2.3 & 2.4
+The pdf generated after compilation contains all the figures which appear in chapters 1 and 2, and some that appear in chapter 3: 
+fig 1.1, 1.2, 1.3 & 1.4 / fig 2.1, 2.2, 2.3 & 2.4 / fig 3.2, 3.3 & 3.4
 
 ------------------------------------------------------------
 
